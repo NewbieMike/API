@@ -19,7 +19,7 @@ app.use('/api', concertsRoutes);
 app.use('/api', seatsRoutes);
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/public/index.html'));
+    res.sendFile(path.join(__dirname, '/client/build/index.html'));
 });
 
 // Przekierowanie w przypadku błędnego adresu strony
@@ -34,7 +34,7 @@ const server = app.listen(process.env.PORT || 8000, () => {
 const io = socket(server);
 io.on('connection', (socket) => {
     console.log('New user! Its id - ' + socket.id);
-    
+
 });
 
 //module.exports = server;
