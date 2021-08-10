@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import io from 'socket.io-client';
 import MainLayout from './components/layout/MainLayout/MainLayout';
 
 // import routes
@@ -10,13 +9,6 @@ import Prices from './components/pages/Prices/PricesPage';
 import Order from './components/pages/Order/OrderPage.js';
 
 class App extends React.Component {
-  componentDidMount() {
-    
-    this.socket = io.connect(
-      process.env.NODE_ENV === 'production' ? '/' : 'http://localhost:8000'
-    );
-    
-  }
   render() {
     return (
       <MainLayout>
