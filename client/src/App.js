@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import io from 'socket.io-client';
+
 import MainLayout from './components/layout/MainLayout/MainLayout';
 
 // import routes
